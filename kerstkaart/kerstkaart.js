@@ -1,28 +1,52 @@
-    const canvas = document.getElementById("canvas");
+const canvas = document.getElementById("canvas");
+    
+
     const g = canvas.getContext("2d");
     const ctx = canvas.getContext("2d");
 
-    //boom
+    function boom() {
     g.fillStyle = "brown";
-    g.fillRect(575, 500, 50, 150);
+    g.fillRect(875, 700, 50, 150);
     g.fillStyle = "green";
     g.beginPath();
-    g.moveTo(600, 300);
-    g.lineTo(450, 500);
-    g.lineTo(750, 500);
+    g.moveTo(900, 400);
+    g.lineTo(700, 700);
+    g.lineTo(1100, 700);
     g.closePath();
     g.fill();
-    g.beginPath();
-    g.moveTo(600, 200);
-    g.lineTo(400, 450);
-    g.lineTo(800, 450);
-    g.closePath();
-    g.fill();
-    g.beginPath();
-    g.moveTo(600, 100);
-    g.lineTo(350, 400);
-    g.lineTo(850, 400);
-    g.closePath();
-    g.fill();
-    //ballen
+    g.stroke();
+    }
     
+    //ballen random kleur
+    function randomcolor() {
+        let r = Math.random() * 255;
+        let g = Math.random() * 255;
+        let b = Math.random() * 255;
+        let color = `rgb(${r}, ${g}, ${b})`;
+        return color;
+    }
+
+
+    function ballen() {
+        ctx.fillStyle = randomcolor();
+        ctx.beginPath();
+        ctx.arc(Math.random() * 300 + 750, Math.random() * 250 + 450, 15, 0, Math.PI * 2);
+        ctx.fill();
+        ctx.stroke();
+    }
+
+    ballen();
+    ballen();
+    ballen();
+    ballen();
+    ballen();
+    ballen();
+    ballen();
+
+
+
+
+
+    boom();
+
+    //ballen tekenen

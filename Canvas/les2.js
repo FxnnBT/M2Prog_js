@@ -10,8 +10,16 @@ function ball(xPos, yPos, radius, color) {
   g.fill();
   g.stroke();
 }
+
+function randomcolor() {
+    let r = Math.random() * 255;
+    let g = Math.random() * 255;
+    let b = Math.random() * 255;
+    let color = `rgb(${r}, ${g}, ${b})`;
+    return color;
+}
 for (let i = 0; i < 500; i++) {
-  ball(Math.random() * 1200, Math.random() * 900, 20, "blue");
+  ball(Math.random() * 1200, Math.random() * 900, 20, randomcolor());
 }
 /*ball(Math.random() * 1000, Math.random() * 900, 50, "red");
 ball(Math.random() * 1000, Math.random() * 900, 40, "blue");
