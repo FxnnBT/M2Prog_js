@@ -161,8 +161,6 @@ const canvas = document.getElementById("canvas");
 
     boom();
     ballen();
-    
-    // huisjes
     huisje1();
     huisje2();
     huisje3();
